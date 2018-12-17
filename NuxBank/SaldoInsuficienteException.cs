@@ -25,7 +25,5 @@ namespace NuxBank
             : base(message, innerException)
         {
         }
-           }
-
     }
 }

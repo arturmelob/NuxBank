@@ -1,0 +1,7 @@
+C:\Users\Auvo\Desktop\Artur\C#\NuxBank\NuxBank\NuxBank\obj\Debug\NuxBank.csprojAssemblyReference.cache
+C:\Users\Auvo\Desktop\Artur\C#\NuxBank\NuxBank\NuxBank\obj\Debug\NuxBank.csproj.CoreCompileInputs.cache
+C:\Users\Auvo\Desktop\Artur\C#\NuxBank\NuxBank\NuxBank\bin\Debug\NuxBank.exe.config
+C:\Users\Auvo\Desktop\Artur\C#\NuxBank\NuxBank\NuxBank\bin\Debug\NuxBank.exe
+C:\Users\Auvo\Desktop\Artur\C#\NuxBank\NuxBank\NuxBank\bin\Debug\NuxBank.pdb
+C:\Users\Auvo\Desktop\Artur\C#\NuxBank\NuxBank\NuxBank\obj\Debug\NuxBank.exe
+C:\Users\Auvo\Desktop\Artur\C#\NuxBank\NuxBank\NuxBank\obj\Debug\NuxBank.pdb

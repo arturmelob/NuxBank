@@ -8,9 +8,14 @@ namespace NuxBank
 {
     public class ContaCorrente
     {
+        
+
         public int NumeroAgencia { get; set; }
         public int NumeroConta { get; set; }
         public Cliente Titular { get; set; }
+        public int TotalDeContasCriadas { get; set; }
+        public bool Status { get; set; }
+        
         private decimal _saldo { get; set; }
         public decimal Saldo {
 
@@ -25,8 +30,7 @@ namespace NuxBank
                 _saldo = value;
             }
         }
-        public int TotalDeContasCriadas { get; set; }
-        public bool Status { get; set; }
+        
 
         public ContaCorrente(int agencia, int conta){
 
@@ -35,6 +39,7 @@ namespace NuxBank
                 throw new ArgumentException();
             }
 
+
             TotalDeContasCriadas++;
         }
 
@@ -42,8 +47,22 @@ namespace NuxBank
         {
             if(conta.Saldo <= valorDeSaque)
             {
-                throw new SaldoInsuficienteException();
+                throw new SaldoInsuficienteException($"Você tentou sacar um valor superior ao seu saldo. Valor da tentativa: R${valorDeSaque}");
             }
+
+            conta.Saldo -= valorDeSaque;
+            
+        }
+
+        public void Transferir(ContaCorrente contaOrigem, ContaCorrente contaDestino, decimal valorDeTransferencia)
+        {
+            if(contaOrigem.Saldo < valorDeTransferencia)
+            {
+                throw new SaldoInsuficienteException($"Você tentou transferir um valor para a conta {contaDestino.NumeroConta}. Valor da tentativa: R${valorDeTransferencia}");
+            }
+
+            contaOrigem.Saldo -= valorDeTransferencia;
+            contaDestino.Saldo += valorDeTransferencia;
 
         }
 

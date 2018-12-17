@@ -10,6 +10,17 @@ namespace NuxBank
     {
         static void Main(string[] args)
         {
+            ContaCorrente contaTeste = new ContaCorrente(2147, 00326437);
+
+            try
+            {
+                contaTeste.Sacar(contaTeste, 250);
+            }
+            catch (SaldoInsuficienteException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            Console.ReadLine();
         }
     }
 }
